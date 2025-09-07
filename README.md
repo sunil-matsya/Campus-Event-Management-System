@@ -1,43 +1,37 @@
 # Campus-Event-Management-System
 Campus Event Management System enables staff to create events, track student registration, attendance, and feedback, while students can browse, register, attend, and submit feedback efficiently.
-#API Connectivity
+# API Connectivity
 Authentication
 
-POST /api/auth/register/ → Register new student
+  POST /api/auth/register/ → Register new student
 
-POST /api/auth/login/ → Login with credentials
+  POST /api/auth/login/ → Login with credentials
 
-POST /api/auth/logout/ → Logout user
+  POST /api/auth/logout/ → Logout user
 
 Events
 
-GET /api/events/ → Get all events
-
-GET /api/events/{id}/ → Get event details
-
-POST /api/events/ → Create new event (Admin only)
-
-PUT /api/events/{id}/ → Update event (Admin only)
-
-DELETE /api/events/{id}/ → Delete event (Admin only)
+  GET /api/events/ → Get all events
+  GET /api/events/{id}/ → Get event details
+  POST /api/events/ → Create new event (Admin only)
+  PUT /api/events/{id}/ → Update event (Admin only)
+  DELETE /api/events/{id}/ → Delete event (Admin only)
 
 Registrations
 
-POST /api/register/ → Student registers for an event
-
-DELETE /api/register/{id}/ → Cancel registration
+  POST /api/register/ → Student registers for an event
+  DELETE /api/register/{id}/ → Cancel registration
 
 Attendance
 
-POST /api/attendance/mark/ → Mark student attendance
+  POST /api/attendance/mark/ → Mark student attendance
 
 Feedback
 
-POST /api/feedback/ → Submit event feedback
+  POST /api/feedback/ → Submit event feedback
+  GET /api/feedback/{event_id}/ → View event feedback
 
-GET /api/feedback/{event_id}/ → View event feedback
-
-#bash
+# bash
 
 campusevents/
 │── campusevents/               # Project config (settings, urls, wsgi, asgi)
@@ -65,44 +59,15 @@ campusevents/
 │── .env                        # Environment variables
 │── manage.py                   # Django project manager
 
-#Flow Chart
 
 
-                ┌────────────────────┐
-                │   Login / Signup   │
-                └─────────┬──────────┘
-                          │
-          ┌───────────────┴────────────────┐
-          │                                │
- ┌────────▼──────────┐             ┌───────▼───────────┐
- │   Student User    │             │    Staff User     │
- └────────┬──────────┘             └────────┬──────────┘
-          │                                │
-   ┌──────▼───────┐                ┌───────▼────────┐
-   │ View Events  │                │ Create Events  │
-   └──────┬───────┘                └───────┬────────┘
-          │                                │
- ┌────────▼────────┐               ┌───────▼───────────┐
- │ Register Event  │               │ View Reports      │
- │ Mark Attendance │               │ (Popularity, etc.)│
- │ Submit Feedback │               │ Export CSV        │
- └────────┬────────┘               └───────────────────┘
-          │
-   ┌──────▼───────┐
-   │   Feedback   │
-   └──────────────┘
+# Technologiies Used
 
-#Technologiies Used
-
-Backend Framework → Django 5.x (Python 3.13)
-
-Database → PostgreSQL (with Django ORM)
-
-Frontend → Django Templates + Bootstrap
-
-Authentication → CustomUser model (email login)
-
-Reports → CSV Export (Django + Python CSV module)
-
-Deployment Ready → Supports .env for secure configs
-
+  Backend Framework → Django 5.x (Python 3.13)
+  Database → PostgreSQL (with Django ORM)
+  Frontend → Django Templates + Bootstrap
+  Authentication → CustomUser model (email login)
+  Reports → CSV Export (Django + Python CSV module)
+  
+  Deployment Ready → Supports .env for secure configs
+  
