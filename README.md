@@ -1,7 +1,8 @@
 # Campus-Event-Management-System
 Campus Event Management System enables staff to create events, track student registration, attendance, and feedback, while students can browse, register, attend, and submit feedback efficiently.
 # API Connectivity
-Authentication
+
+# Authentication
 
   POST /api/auth/register/ → Register new student
 
@@ -9,7 +10,7 @@ Authentication
 
   POST /api/auth/logout/ → Logout user
 
-Events
+# Events
 
   GET /api/events/ → Get all events
   
@@ -22,18 +23,18 @@ Events
   
   DELETE /api/events/{id}/ → Delete event (Admin only)
 
-Registrations
+# Registrations
 
   
   POST /api/register/ → Student registers for an event
   
   DELETE /api/register/{id}/ → Cancel registration
 
-Attendance
+# Attendance
 
   POST /api/attendance/mark/ → Mark student attendance
 
-Feedback
+# Feedback
 
   POST /api/feedback/ → Submit event feedback
   
